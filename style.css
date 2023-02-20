@@ -1,19 +1,41 @@
 body {
+    font-family: Roboto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
+    background-image: url(img/hintergrund.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 200px;
 }
 
 table {
     border-collapse: collapse;
+    margin: 2rem;
 }
 
 tr {
-    width: 399px;
+    width: 50rem;
 }
 
 td {
-    border: 5px solid black;
-    width: 133px;
-    height: 133px;
+    border: 5px solid rgb(255, 255, 255);
+    width: 150px;
+    height: 150px;
+    transition: 0.4s;
+}
+
+td:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 table tr:first-child td {
@@ -32,10 +54,156 @@ table tr td:last-child {
     border-right: 0;
 }
 
-.main-Box {
+.background-Table {
+    background-color: rgb(0, 0, 0, 0.3);
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 5px 22px 5px #000000;
+    box-shadow: 5px 5px 22px 5px #000000;
+}
+
+.start-Screen {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.3);
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 5px 22px 5px #000000;
+    box-shadow: 5px 5px 22px 5px #000000;
+    width: 900px;
+    height: 500px;
+}
+
+.sub-Headline {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.circle-Box {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
+}
+
+.circle-Box img {
+    width: 100px;
+}
+
+.x-Box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x-Box img {
+    width: 100px;
+}
+
+.d-none {
+    display: none;
+}
+
+input {
+    outline: 0;
+    color: white;
+    border: double 1px transparent;
+    border-radius: 5px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, #E93900, #0084F8);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    -webkit-box-shadow: 5px 5px 22px 5px #000000;
+    box-shadow: 5px 5px 22px 5px #000000;
+    height: 30px;
+    font-size: 20px;
+}
+
+.input-Name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-Namesub {
+    font-size: 20px;
+}
+
+button {
+    color: white;
+    border: double 1px transparent;
+    border-radius: 5px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, #E93900, #0084F8);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    -webkit-box-shadow: 5px 5px 22px 5px #000000;
+    box-shadow: 5px 5px 22px 5px #000000;
+    margin-top: 50px;
+    width: 150px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.input-Field {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-Field:hover {
+    cursor: pointer;
+}
+
+.players {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.players img {
+    width: 50px;
+}
+
+.playerSub {
+    display: flex;
+    align-items: center;
+}
+
+.winner-line {
+    width: 400px;
+    height: 15px;
+    border: double 1px transparent;
+    border-radius: 5px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), radial-gradient(circle at top left, #E93900, #0084F8);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 370px;
+    transform: scalex(0.0);
+    transition: 0.3s ease-in-out;
+    translate: 63px;
+}
+
+.vertical {
+    transform: rotate(90deg) scalex(0.0);
+    transition: 0.3s ease-in-out;
+}
+
+.diagonal {
+    transform: rotate(45deg) scalex(0.0);
+    width: 450px;
+    transition: 0.3s ease-in-out;
+    translate: 39px;
+}
+
+.diagonal-135 {
+    transform: rotate(135deg) scalex(0.0);
+    width: 450px;
+    transition: 0.3s ease-in-out;
+    translate: 40px;
 }

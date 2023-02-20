@@ -5,29 +5,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Lobster&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sassy+Frass&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>TicTacToe</title>
     <script src="script.js"></script>
 </head>
 
-<body>
-    
-    <div class="main-Box">
+<body onload="init()">
+    <header>
+        <h1>TIC TAC TOE</h1>
+    </header>
+
+    <!--------------------------Input-Player-Name-------------------------------->
+
+    <div class="start-Screen" id="startScreen">
+        <span class="sub-Headline">Willkommen bei Tic Tac Toe !!</span>
+        <div class="input-Name" id="inputName">
+            <div class="input-Namesub" id="inputName1">
+                <span>Bitte Name Spieler 1 eingeben :</span>
+                <div class="input-Field">
+                    <form onsubmit="">
+                        <input id="name1" required type="text">
+                    </form>
+                    <img onclick="inputPlayer1()" src="img/enter.png">
+                </div>
+            </div>
+            <div class="input-Namesub" id="inputName2">
+                <span>Bitte Name Spieler 2 eingeben :</span>
+                <div class="input-Field"><input id="name2" type="text">
+                    <img onclick="inputPlayer2()" src="img/enter.png">
+                </div>
+            </div>
+            <button id="buttonStart" onclick="startGame()">Spiel starten</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!----------------------matchfield------------------------------------------------->
+
+    <div class="players" id="Players"></div>
+    <div class="background-Table" id="backgroundTable">
+
+        <!------------------------------Winner-Lines------------------------------------------->
+
+        
+        <div class="winner-line" id="winnerLine1"></div>
+        <div class="winner-line" id="winnerLine2" style="top: 525px;"></div>
+        <div class="winner-line" id="winnerLine3" style="top: 680px"></div>
+        <div class="winner-line vertical" id="winnerLine4" style="top: 530px; translate: 220px;"></div>
+        <div class="winner-line vertical" id="winnerLine5" style="top: 530px; translate: 64px;"></div>
+        <div class="winner-line vertical" id="winnerLine6" style="top: 530px; translate: -94px;"></div>
+        <div class="winner-line diagonal" id="winnerLine7" style="top: 525px;"></div>
+        <div class="winner-line diagonal-135" id="winnerLine8" style="top: 525px;"></div>
+
+        <!------------------------------Winner-Lines------------------------------------------->
         <table>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td onclick="fillField(0)">
+                    <div id="circle-0" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-0" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
+                <td onclick="fillField(1)">
+                    <div id="circle-1" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-1" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
+                <td onclick="fillField(2)">
+                    <div id="circle-2" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-2" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td onclick="fillField(3)">
+                    <div id="circle-3" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-3" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
+                <td onclick="fillField(4)">
+                    <div id="circle-4" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-4" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
+                <td onclick="fillField(5)">
+                    <div id="circle-5" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-5" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td onclick="fillField(6)">
+                    <div id="circle-6" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-6" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
+                <td onclick="fillField(7)">
+                    <div id="circle-7" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-7" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
+                <td onclick="fillField(8)">
+                    <div id="circle-8" class="d-none circle-Box"><img src="img/circle.png"></div>
+                    <div id="cross-8" class="d-none x-Box"><img src="img/cross.png"></div>
+                </td>
             </tr>
         </table>
     </div>
